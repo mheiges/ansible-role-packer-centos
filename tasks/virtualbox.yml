@@ -1,6 +1,6 @@
 ---
 
-- name install dependencies for VirtualBox guest addtions
+- name: install dependencies for VirtualBox guest addtions
   yum:
     name: "{{ item }}"
     state: present
