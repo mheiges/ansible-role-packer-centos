@@ -1,5 +1,17 @@
 ---
 
+- name install dependencies for VirtualBox guest addtions
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - bzip2
+    - kernel-devel
+    - kernel-headers
+    - gcc
+    - make
+    - perl
+
 - name: Mount VirtualBox guest additions ISO
   mount:
     name: /mnt/vbox
@@ -10,7 +22,6 @@
 
 - name: Install VirtualBox guest additions
   shell: sh /mnt/vbox/VBoxLinuxAdditions.run
-  failed_when: false
 
 - name: Unmount VirtualBox guest additions ISO
   mount:
@@ -19,7 +30,7 @@
     state: absent
     fstype: iso9660
 
-# - name: Delete VirtualBox guest additions ISO
-#   file:
-#     path: "/root/VBoxGuestAdditions.iso"
-#     state: absent
+- name: Delete VirtualBox guest additions ISO
+  file:
+    path: "/root/VBoxGuestAdditions.iso"
+    state: absent
