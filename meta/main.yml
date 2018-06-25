@@ -1,6 +1,6 @@
 galaxy_info:
   author: Mark Heiges
-  description: Debian configuration for Packer-builds of Vagrant boxes
+  description: CentOS configuration for Packer-builds of Vagrant boxes
   company: NA
 
   # If the issue tracker for your role is not on github, uncomment the
@@ -45,12 +45,13 @@ galaxy_info:
   #   - 99.99
 
   platforms:
-    - name: Debian
+    - name: CentOS
       versions:
       - all
 
   galaxy_tags:
-    - debian
+    - centos
+    - redhat
     - packer
     - vagrant
 

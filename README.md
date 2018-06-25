@@ -1,7 +1,7 @@
-packer-debian
+packer-centos
 =========
 
-Ansible Role: Packer-build Debian configuration for Vagrant VirtualBox
+Ansible Role: Packer-build CentOS configuration for Vagrant VirtualBox
 
 Requirements
 ------------
