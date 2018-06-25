@@ -3,7 +3,7 @@
 - name: Mount VirtualBox guest additions ISO
   mount:
     name: /mnt/vbox
-    src: "/home/vagrant/VBoxGuestAdditions.iso"
+    src: "/root/VBoxGuestAdditions.iso"
     opts: loop
     state: mounted
     fstype: iso9660
@@ -15,11 +15,11 @@
 - name: Unmount VirtualBox guest additions ISO
   mount:
     name: /mnt/vbox
-    src: "/home/vagrant/VBoxGuestAdditions.iso"
+    src: "/root/VBoxGuestAdditions.iso"
     state: absent
     fstype: iso9660
 
 - name: Delete VirtualBox guest additions ISO
   file:
-    path: "/home/vagrant/VBoxGuestAdditions.iso"
+    path: "/root/VBoxGuestAdditions.iso"
     state: absent
