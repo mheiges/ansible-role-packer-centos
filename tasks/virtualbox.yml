@@ -19,7 +19,7 @@
     state: absent
     fstype: iso9660
 
-- name: Delete VirtualBox guest additions ISO
-  file:
-    path: "/root/VBoxGuestAdditions.iso"
-    state: absent
+# - name: Delete VirtualBox guest additions ISO
+#   file:
+#     path: "/root/VBoxGuestAdditions.iso"
+#     state: absent
