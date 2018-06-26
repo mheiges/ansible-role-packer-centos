@@ -12,5 +12,5 @@
     path: /opt/VBoxGuestAdditions*
   register: has_vboxguestadditions
 
-- include_tasks: virtualbox.yml
-  when: is_virtualbox.stat.exists and not has_vboxguestadditions.stat.exists
+# - include_tasks: virtualbox.yml
+#   when: is_virtualbox.stat.exists and not has_vboxguestadditions.stat.exists
