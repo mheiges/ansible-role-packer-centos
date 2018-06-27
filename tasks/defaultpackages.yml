@@ -9,3 +9,8 @@
     - net-tools
     - nmap
     - ack
+
+
+- name: install sshuttle
+  pip:
+    name: sshuttle
