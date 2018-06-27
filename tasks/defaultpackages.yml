@@ -1,0 +1,11 @@
+---
+
+- name: Install default software
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - git
+    - net-tools
+    - nmap
+    - ack
